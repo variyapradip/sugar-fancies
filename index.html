@@ -1309,7 +1309,7 @@
             <text x="180" y="220" fill="#C9A84C" font-size="10" opacity="0.2">✦</text>
           </svg>
 
-          
+
         </div>
         <div class="gallery-overlay">
           <span>Botanical Bloom</span>
@@ -1470,81 +1470,144 @@
 <section class="menu-section" id="menu">
   <div class="menu-inner">
     <div class="menu-head">
-      <div class="section-tag">Flavour Menu</div>
-      <h2 class="section-title">Choose Your <em>Signature Flavour</em></h2>
-      <p>All bases available in three sizes: 500g / 1kg / 2kg. Custom sculpted cakes quoted individually.</p>
+      <div class="section-tag">Our Menu</div>
+      <h2 class="section-title">Handcrafted <em>Flavours &amp; Prices</em></h2>
+      <p>Every item is baked fresh to order with the finest ingredients. All cake prices listed per 500g &amp; 1kg.</p>
     </div>
+
+    <!-- TABS -->
     <div class="menu-tabs">
-      <button class="menu-tab active" onclick="filterMenu('all', this)">All</button>
-      <button class="menu-tab" onclick="filterMenu('classic', this)">Classic</button>
-      <button class="menu-tab" onclick="filterMenu('premium', this)">Premium</button>
-      <button class="menu-tab" onclick="filterMenu('signature', this)">Signature</button>
+      <button class="menu-tab active" onclick="filterMenu('all',this)">All</button>
+      <button class="menu-tab" onclick="filterMenu('cakes',this)">Cakes</button>
+      <button class="menu-tab" onclick="filterMenu('cupcakes',this)">Cupcakes</button>
+      <button class="menu-tab" onclick="filterMenu('cookies',this)">Cookies</button>
+      <button class="menu-tab" onclick="filterMenu('macarons',this)">Macarons</button>
+      <button class="menu-tab" onclick="filterMenu('teacake',this)">Tea Cakes</button>
+      <button class="menu-tab" onclick="filterMenu('jarcake',this)">Jar Cakes</button>
     </div>
-    <div class="menu-grid" id="menuGrid">
-      <div class="menu-item" data-cat="classic">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Vanilla Bean Dream</div>
-          <div class="menu-item-desc">Madagascar vanilla sponge, vanilla Swiss meringue buttercream</div>
+
+    <!-- REAL MENU GRID -->
+    <div class="real-menu-grid" id="menuGrid">
+
+      <!-- ── CAKES ── -->
+      <div class="rmenu-category" data-cat="cakes">
+        <div class="rmenu-cat-header">
+          <span class="rmenu-cat-title">🎂 Cakes</span>
+          <div class="rmenu-price-labels"><span>500g</span><span>1kg</span></div>
         </div>
-        <div class="menu-item-price">₹2,800</div>
-      </div>
-      <div class="menu-item" data-cat="classic">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Dark Chocolate Velvet</div>
-          <div class="menu-item-desc">Belgian chocolate fudge cake, dark ganache, cocoa nibs</div>
+        <div class="rmenu-rows">
+          <div class="rmenu-row"><span class="rmenu-name">Dutch Chocolate Truffle</span><span class="rmenu-p">₹450</span><span class="rmenu-p">₹900</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Crunchie Pleasure</span><span class="rmenu-p">₹500</span><span class="rmenu-p">₹1000</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Hazelnut | Almond | Walnut</span><span class="rmenu-p">—</span><span class="rmenu-p">—</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Truffle Palate</span><span class="rmenu-p">₹475</span><span class="rmenu-p">₹950</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Mint | Orange | Coffee</span><span class="rmenu-p">—</span><span class="rmenu-p">—</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Red Velvet</span><span class="rmenu-p">₹550</span><span class="rmenu-p">₹1100</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Chocolate Stacked</span><span class="rmenu-p">₹500</span><span class="rmenu-p">₹1000</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Oreo | Kitkat | 5-Star</span><span class="rmenu-p">₹450</span><span class="rmenu-p">₹900</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Jumbled Fruits**</span><span class="rmenu-p">—</span><span class="rmenu-p">—</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Pineapple | Kiwi | Strawberry | Mango | Lychee</span><span class="rmenu-p">—</span><span class="rmenu-p">—</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Caramel Nutty Crunch</span><span class="rmenu-p">₹550</span><span class="rmenu-p">₹1100</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Vibrant Rainbow</span><span class="rmenu-p">₹600</span><span class="rmenu-p">₹1200</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Clustered Forests</span><span class="rmenu-p">₹400</span><span class="rmenu-p">₹800</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Nutella Hazelnut</span><span class="rmenu-p">₹600</span><span class="rmenu-p">₹1200</span></div>
+          <div class="rmenu-row"><span class="rmenu-name">Vanilla Truffle</span><span class="rmenu-p">₹450</span><span class="rmenu-p">₹900</span></div>
         </div>
-        <div class="menu-item-price">₹3,200</div>
       </div>
-      <div class="menu-item" data-cat="classic">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Strawberry Garden</div>
-          <div class="menu-item-desc">Fresh strawberry sponge, cream cheese frosting, basil compote</div>
+
+      <!-- ── CUPCAKES ── -->
+      <div class="rmenu-category" data-cat="cupcakes">
+        <div class="rmenu-cat-header">
+          <span class="rmenu-cat-title">🧁 Cupcakes</span>
+          <div class="rmenu-price-labels"><span>Per Piece</span></div>
         </div>
-        <div class="menu-item-price">₹3,000</div>
-      </div>
-      <div class="menu-item" data-cat="premium">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Salted Caramel Noir</div>
-          <div class="menu-item-desc">Brown butter cake, fleur de sel caramel, dark chocolate shards</div>
+        <div class="rmenu-rows">
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Red Velvet</span><span class="rmenu-badge">₹75 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Chocolate</span><span class="rmenu-badge">₹75 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Salted Caramel</span><span class="rmenu-badge">₹75 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Rainbow Vanilla</span><span class="rmenu-badge">₹75 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Nutella Blast</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Princess Vanilla</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Mint Dout Chocolate</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Chocolate-Full-O-Chips</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Krispy Kitkat</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Blueberry</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Rose</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Lime</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
+          <div class="rmenu-row cupcake-row"><span class="rmenu-name">Orange Fudge</span><span class="rmenu-badge gold-badge">₹80 each</span></div>
         </div>
-        <div class="menu-item-price">₹4,200</div>
       </div>
-      <div class="menu-item" data-cat="premium">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Pistachio Rose</div>
-          <div class="menu-item-desc">Pistachio frangipane, Damascus rose water cream, lychee jelly</div>
+
+      <!-- ── COOKIES ── -->
+      <div class="rmenu-category" data-cat="cookies">
+        <div class="rmenu-cat-header">
+          <span class="rmenu-cat-title">🍪 Cookies</span>
         </div>
-        <div class="menu-item-price">₹4,800</div>
-      </div>
-      <div class="menu-item" data-cat="premium">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Earl Grey & Honey</div>
-          <div class="menu-item-desc">Bergamot-infused sponge, wild honey curd, chamomile cream</div>
+        <div class="rmenu-rows">
+          <div class="rmenu-row single"><span class="rmenu-name">Chocolate Chunk</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Sugar Cookies</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Salt Cookies</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Oatmeal &amp; Raisin</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Pistachio</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Almond Cinnamon</span></div>
         </div>
-        <div class="menu-item-price">₹4,500</div>
       </div>
-      <div class="menu-item" data-cat="signature">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Gold Rush</div>
-          <div class="menu-item-desc">Champagne sponge, passion fruit curd, edible 24k gold leaf accents</div>
+
+      <!-- ── MACARONS ── -->
+      <div class="rmenu-category" data-cat="macarons">
+        <div class="rmenu-cat-header">
+          <span class="rmenu-cat-title">🫐 Macarons</span>
+          <div class="rmenu-price-labels"><span>₹65 each</span></div>
         </div>
-        <div class="menu-item-price">₹6,800</div>
-      </div>
-      <div class="menu-item" data-cat="signature">
-        <div class="menu-item-info">
-          <div class="menu-item-name">Midnight Truffle</div>
-          <div class="menu-item-desc">Ebony cocoa, black sesame praline, truffle-infused ganache, velvet finish</div>
+        <div class="rmenu-rows">
+          <div class="rmenu-row single"><span class="rmenu-name">Raspberry</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Chocolate</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Matcha &amp; Sesame</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Coffee</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Nutella</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Lavender</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Rose</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Pistachio</span></div>
         </div>
-        <div class="menu-item-price">₹7,200</div>
       </div>
-      <div class="menu-item" data-cat="signature">
-        <div class="menu-item-info">
-          <div class="menu-item-name">The Fancy</div>
-          <div class="menu-item-desc">Our legendary 7-layer creation: seasonal, ever-changing, always extraordinary</div>
+
+      <!-- ── TEA CAKES ── -->
+      <div class="rmenu-category" data-cat="teacake">
+        <div class="rmenu-cat-header">
+          <span class="rmenu-cat-title">🍵 Tea Cakes</span>
+          <div class="rmenu-price-labels"><span>Per kg</span></div>
         </div>
-        <div class="menu-item-price">₹9,500</div>
+        <div class="rmenu-rows">
+          <div class="rmenu-row single-price"><span class="rmenu-name">Marble</span><span class="rmenu-p">₹800</span></div>
+          <div class="rmenu-row single-price"><span class="rmenu-name">Dates &amp; Walnut</span><span class="rmenu-p">₹900</span></div>
+          <div class="rmenu-row single-price"><span class="rmenu-name">Banana Walnut Bread</span><span class="rmenu-p">₹900</span></div>
+          <div class="rmenu-row single-price"><span class="rmenu-name">Pineapple Upside Down</span><span class="rmenu-p">₹800</span></div>
+          <div class="rmenu-row single-price"><span class="rmenu-name">Apple &amp; Cinnamon</span><span class="rmenu-p">₹900</span></div>
+          <div class="rmenu-row single-price"><span class="rmenu-name">Orange Coconut</span><span class="rmenu-p">₹900</span></div>
+          <div class="rmenu-row single-price"><span class="rmenu-name">Fig &amp; Almond</span><span class="rmenu-p">₹900</span></div>
+        </div>
       </div>
-    </div>
+
+      <!-- ── JAR CAKES ── -->
+      <div class="rmenu-category" data-cat="jarcake">
+        <div class="rmenu-cat-header">
+          <span class="rmenu-cat-title">🫙 Jar Cakes</span>
+          <div class="rmenu-price-labels"><span>₹160 each</span></div>
+        </div>
+        <div class="rmenu-rows">
+          <div class="rmenu-row single"><span class="rmenu-name">Red Velvet</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Molten Chocolate</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Nutella Crunch</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Nutella Cheese Cake</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Blueberry Cheese Cake</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Oreo Cheese Cake</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Fondue</span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Strawberry &amp; Cream <em style="font-size:0.75rem;color:var(--text-muted)">(Seasonal)</em></span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Mango &amp; Cream <em style="font-size:0.75rem;color:var(--text-muted)">(Seasonal)</em></span></div>
+          <div class="rmenu-row single"><span class="rmenu-name">Biscoff Cheese Cake <span style="color:var(--gold);font-size:0.78rem">₹180</span></span></div>
+        </div>
+      </div>
+
+    </div><!-- end real-menu-grid -->
   </div>
 </section>
 
