@@ -959,6 +959,111 @@
       .about-img-accent { width: 120px; }
     }
   </style>
+  <style>
+    /* ─── REAL MENU STYLES ─── */
+    .real-menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .rmenu-category {
+      background: var(--black-card);
+      border: 1px solid var(--black-border);
+      padding: 0;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .rmenu-category:hover { border-color: rgba(201,168,76,0.3); }
+    
+    .rmenu-cat-header {
+      background: rgba(201,168,76,0.08);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 16px 22px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px;
+    }
+    
+    .rmenu-cat-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+    
+    .rmenu-price-labels {
+      display: flex; gap: 12px;
+    }
+    .rmenu-price-labels span {
+      font-family: var(--font-ui);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      min-width: 36px;
+      text-align: right;
+    }
+    
+    .rmenu-rows { padding: 8px 0; }
+    
+    .rmenu-row {
+      display: flex; align-items: center;
+      padding: 9px 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .rmenu-row:last-child { border-bottom: none; }
+    .rmenu-row:hover { background: rgba(201,168,76,0.04); }
+    
+    .rmenu-name {
+      flex: 1;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: rgba(253,250,243,0.82);
+      line-height: 1.4;
+    }
+    
+    .rmenu-p {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--gold);
+      min-width: 42px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    
+    .rmenu-badge {
+      font-family: var(--font-ui);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 3px 9px;
+      background: rgba(201,168,76,0.12);
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.25);
+      white-space: nowrap;
+    }
+    .gold-badge {
+      background: rgba(201,168,76,0.18);
+      border-color: rgba(201,168,76,0.4);
+    }
+    
+    .rmenu-row.single-price .rmenu-p { min-width: 50px; }
+    
+    @media (max-width: 1024px) {
+      .real-menu-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .real-menu-grid { grid-template-columns: 1fr; }
+      .rmenu-cat-header { flex-wrap: wrap; gap: 6px; }
+    }
+    </style>
 </head>
 <body>
 
