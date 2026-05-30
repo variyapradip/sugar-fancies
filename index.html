@@ -1875,9 +1875,9 @@
   function filterMenu(cat, btn) {
     document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('.menu-item').forEach(item => {
+    document.querySelectorAll('.rmenu-category').forEach(item => {
       if (cat === 'all' || item.dataset.cat === cat) {
-        item.style.display = 'flex';
+        item.style.display = 'block';
       } else {
         item.style.display = 'none';
       }
