@@ -182,6 +182,10 @@
       letter-spacing: -0.01em;
       margin-bottom: 24px;
     }
+    .hero-visual img{
+      height: auto;
+    max-width: 100%;
+    }
     .hero-title em {
       font-style: italic;
       font-weight: 400;
@@ -367,6 +371,12 @@
     .about-img-main::after {
       content: ''; position: absolute; inset: 0;
       background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.6) 100%);
+    }
+    .about_img{
+      max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
     }
     .about-img-accent {
       position: absolute; bottom: -24px; right: -24px;
@@ -557,12 +567,18 @@
       width: 100%; padding-bottom: 100%;
       position: relative; overflow: hidden;
     }
-    .gallery-item:first-child .gallery-item-inner { padding-bottom: 50%; }
+    .gallery-item:first-child .gallery-item-inner { }
     .gallery-item:nth-child(4) .gallery-item-inner { padding-bottom: 50%; }
 
     .gallery-svg {
       position: absolute; inset: 0;
       display: flex; align-items: center; justify-content: center;
+    }
+    .gallery-svg img{
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .gallery-overlay {
       position: absolute; inset: 0;
@@ -655,6 +671,7 @@
     .order-section {
       background: linear-gradient(135deg, var(--black-card) 0%, rgba(201,168,76,0.05) 100%);
       border-top: 1px solid var(--black-border);
+      margin-top: 100px;
       border-bottom: 1px solid var(--black-border);
     }
     .order-inner {
@@ -1141,32 +1158,7 @@
     <div class="about-img-wrap">
       <div class="about-img-main">
         <!-- Illustrated baker scene -->
-        <svg viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg" width="80%">
-          <rect x="20" y="60" width="300" height="340" rx="4" fill="#1a1507" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/>
-          <!-- Baker hat -->
-          <rect x="130" y="40" width="80" height="50" rx="6" fill="#C9A84C" opacity="0.85"/>
-          <rect x="115" y="82" width="110" height="10" rx="4" fill="#E8C96B" opacity="0.9"/>
-          <!-- Baker face placeholder -->
-          <circle cx="160" cy="125" r="38" fill="#2a1f05" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-          <!-- Collar & body -->
-          <path d="M100 175 Q160 160 220 175 L235 320 Q160 340 85 320Z" fill="#1e1507" stroke="#C9A84C" stroke-width="0.5" opacity="0.5"/>
-          <!-- Apron -->
-          <path d="M120 185 Q160 170 200 185 L210 310 Q160 325 110 310Z" fill="#2e2208"/>
-          <!-- Bow on apron -->
-          <path d="M150 200 Q160 195 170 200 Q165 208 160 206 Q155 208 150 200Z" fill="#C9A84C" opacity="0.7"/>
-          <!-- Mixing bowl in hands -->
-          <ellipse cx="160" cy="340" rx="60" ry="28" fill="#1a1a1a" stroke="#C9A84C" stroke-width="1"/>
-          <ellipse cx="160" cy="328" rx="50" ry="20" fill="#221c07" stroke="#C9A84C" stroke-width="0.5" opacity="0.7"/>
-          <!-- Whisk -->
-          <line x1="200" y1="310" x2="210" y2="270" stroke="#C9A84C" stroke-width="2"/>
-          <ellipse cx="207" cy="272" rx="8" ry="16" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.7"/>
-          <!-- Stars -->
-          <text x="45" y="100" fill="#C9A84C" font-size="16" opacity="0.3">✦</text>
-          <text x="280" y="140" fill="#C9A84C" font-size="12" opacity="0.25">✦</text>
-          <text x="60" y="280" fill="#C9A84C" font-size="10" opacity="0.2">✦</text>
-          <!-- Label bottom -->
-          <text x="160" y="400" fill="#C9A84C" font-size="11" font-family="serif" text-anchor="middle" opacity="0.5" font-style="italic">Made with love</text>
-        </svg>
+        <img class="about_img" src="./cack4.png" />
       </div>
       <div class="about-img-accent">
         <p>Pure Butter & Love Since 2013</p>
@@ -1303,31 +1295,7 @@
     <div class="gallery-item">
       <div class="gallery-item-inner">
         <div class="gallery-svg">
-          <svg viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <rect width="500" height="300" fill="#1a1507"/>
-            <!-- 5-tier wedding cake -->
-            <rect x="180" y="240" width="140" height="50" rx="4" fill="#2a1e08" stroke="#C9A84C" stroke-width="0.5"/>
-            <rect x="195" y="195" width="110" height="50" rx="4" fill="#261b07" stroke="#C9A84C" stroke-width="0.5"/>
-            <rect x="210" y="153" width="80" height="47" rx="4" fill="#221808" stroke="#C9A84C" stroke-width="0.5"/>
-            <rect x="222" y="118" width="56" height="40" rx="3" fill="#1e1507" stroke="#C9A84C" stroke-width="0.5"/>
-            <rect x="234" y="88" width="32" height="35" rx="3" fill="#1b1306" stroke="#C9A84C" stroke-width="0.5"/>
-            <!-- Gold drips -->
-            <path d="M180 248 Q200 255 220 248 Q240 241 260 248 Q280 255 300 248 Q310 241 320 248" stroke="#C9A84C" stroke-width="1.5" fill="none" opacity="0.7"/>
-            <path d="M195 203 Q215 210 235 203 Q255 196 275 203 Q290 208 305 203" stroke="#C9A84C" stroke-width="1.5" fill="none" opacity="0.7"/>
-            <!-- Flowers decoration -->
-            <circle cx="230" cy="222" r="7" fill="none" stroke="#C9A84C" stroke-width="1"/>
-            <circle cx="250" cy="222" r="7" fill="none" stroke="#C9A84C" stroke-width="1"/>
-            <circle cx="270" cy="222" r="7" fill="none" stroke="#C9A84C" stroke-width="1"/>
-            <circle cx="230" cy="222" r="3" fill="#C9A84C" opacity="0.4"/>
-            <circle cx="250" cy="222" r="3" fill="#C9A84C" opacity="0.4"/>
-            <circle cx="270" cy="222" r="3" fill="#C9A84C" opacity="0.4"/>
-            <!-- Top topper -->
-            <line x1="250" y1="88" x2="250" y2="65" stroke="#C9A84C" stroke-width="1.5"/>
-            <text x="250" y="62" fill="#C9A84C" font-size="14" text-anchor="middle">♥</text>
-            <text x="140" y="120" fill="#C9A84C" font-size="20" opacity="0.2">✦</text>
-            <text x="350" y="180" fill="#C9A84C" font-size="16" opacity="0.15">✦</text>
-            <text x="130" y="260" fill="#C9A84C" font-size="12" opacity="0.1">✦</text>
-          </svg>
+        <img class="" src="./cack7.PNG" />
         </div>
         <div class="gallery-overlay">
           <span>Royal Elegance</span>
@@ -1340,25 +1308,7 @@
     <div class="gallery-item">
       <div class="gallery-item-inner">
         <div class="gallery-svg">
-          <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <rect width="260" height="260" fill="#161209"/>
-            <!-- Round floral cake -->
-            <circle cx="130" cy="145" r="80" fill="#221a07" stroke="#C9A84C" stroke-width="1"/>
-            <circle cx="130" cy="145" r="72" fill="#1e1607"/>
-            <!-- Floral pattern -->
-            <circle cx="130" cy="145" r="28" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.6"/>
-            <circle cx="130" cy="90" r="16" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="175" cy="118" r="14" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="172" cy="170" r="13" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="130" cy="192" r="14" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="86" cy="168" r="13" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="85" cy="116" r="14" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.5"/>
-            <!-- Center -->
-            <circle cx="130" cy="145" r="10" fill="#C9A84C" opacity="0.3"/>
-            <text x="90" y="60" fill="#C9A84C" font-size="14" opacity="0.3">✦</text>
-            <text x="180" y="220" fill="#C9A84C" font-size="10" opacity="0.2">✦</text>
-          </svg>
-
+          <img class="" src="./cack5.PNG" />
 
         </div>
         <div class="gallery-overlay">
@@ -1372,25 +1322,7 @@
     <div class="gallery-item">
       <div class="gallery-item-inner">
         <div class="gallery-svg">
-          <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <rect width="260" height="260" fill="#130f06"/>
-            <!-- Geode cake slice look -->
-            <rect x="60" y="70" width="140" height="160" rx="6" fill="#1e1807" stroke="#C9A84C" stroke-width="0.8"/>
-            <!-- Geode crystal interior -->
-            <path d="M75 115 L100 90 L130 100 L155 85 L185 110 L185 190 L75 190Z" fill="#2a2009" stroke="#C9A84C" stroke-width="0.5" opacity="0.7"/>
-            <!-- Crystal shards -->
-            <polygon points="105,110 120,88 132,108" fill="#C9A84C" opacity="0.18"/>
-            <polygon points="132,108 148,90 158,112" fill="#C9A84C" opacity="0.12"/>
-            <polygon points="115,135 128,112 140,134" fill="#C9A84C" opacity="0.15"/>
-            <polygon points="145,130 155,112 165,132" fill="#C9A84C" opacity="0.1"/>
-            <circle cx="120" cy="140" r="4" fill="#E8C96B" opacity="0.4"/>
-            <circle cx="145" cy="125" r="3" fill="#E8C96B" opacity="0.35"/>
-            <circle cx="135" cy="155" r="2.5" fill="#E8C96B" opacity="0.3"/>
-            <!-- Top icing -->
-            <path d="M60 78 Q90 68 130 72 Q165 68 200 78" stroke="#C9A84C" stroke-width="2" fill="none" opacity="0.5"/>
-            <text x="40" y="55" fill="#C9A84C" font-size="16" opacity="0.25">✦</text>
-            <text x="195" y="50" fill="#C9A84C" font-size="12" opacity="0.2">✦</text>
-          </svg>
+          <img class="" src="./cack6.PNG" />
         </div>
         <div class="gallery-overlay">
           <span>Golden Geode</span>
@@ -1403,26 +1335,7 @@
     <div class="gallery-item">
       <div class="gallery-item-inner">
         <div class="gallery-svg">
-          <svg viewBox="0 0 500 260" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <rect width="500" height="260" fill="#14100a"/>
-            <!-- Dessert box arrangement: macarons, petit fours -->
-            <rect x="40" y="60" width="420" height="160" rx="6" fill="#1e1a0a" stroke="#C9A84C" stroke-width="0.8" opacity="0.7"/>
-            <!-- Row of 6 macarons -->
-            <circle cx="90" cy="140" r="28" fill="#2a2008" stroke="#C9A84C" stroke-width="0.8"/>
-            <ellipse cx="90" cy="140" rx="22" ry="8" fill="#C9A84C" opacity="0.25"/>
-            <circle cx="175" cy="140" r="28" fill="#221c07" stroke="#C9A84C" stroke-width="0.8"/>
-            <ellipse cx="175" cy="140" rx="22" ry="8" fill="#C9A84C" opacity="0.2"/>
-            <circle cx="260" cy="140" r="28" fill="#261f08" stroke="#C9A84C" stroke-width="0.8"/>
-            <ellipse cx="260" cy="140" rx="22" ry="8" fill="#C9A84C" opacity="0.22"/>
-            <circle cx="345" cy="140" r="28" fill="#201a07" stroke="#C9A84C" stroke-width="0.8"/>
-            <ellipse cx="345" cy="140" rx="22" ry="8" fill="#C9A84C" opacity="0.2"/>
-            <circle cx="415" cy="140" r="28" fill="#281e06" stroke="#C9A84C" stroke-width="0.8"/>
-            <ellipse cx="415" cy="140" rx="22" ry="8" fill="#C9A84C" opacity="0.18"/>
-            <!-- Label -->
-            <text x="250" y="235" fill="#C9A84C" font-size="13" font-family="serif" text-anchor="middle" opacity="0.55" font-style="italic">Petite Fancies Collection</text>
-            <text x="60" y="50" fill="#C9A84C" font-size="14" opacity="0.2">✦</text>
-            <text x="430" y="50" fill="#C9A84C" font-size="12" opacity="0.2">✦</text>
-          </svg>
+          <img class="about_img" src="./cup.PNG" />
         </div>
         <div class="gallery-overlay">
           <span>Petite Fancies Box</span>
@@ -1435,29 +1348,7 @@
     <div class="gallery-item">
       <div class="gallery-item-inner">
         <div class="gallery-svg">
-          <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <rect width="260" height="260" fill="#100e08"/>
-            <!-- Drip cake -->
-            <rect x="65" y="85" width="130" height="145" rx="8" fill="#1e1908" stroke="#C9A84C" stroke-width="0.8"/>
-            <!-- Drips from top -->
-            <path d="M65 95 Q80 110 80 130" stroke="#E8C96B" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
-            <path d="M100 85 Q103 108 103 125" stroke="#E8C96B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-            <path d="M140 85 Q143 115 143 135" stroke="#E8C96B" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
-            <path d="M175 90 Q180 112 180 128" stroke="#E8C96B" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
-            <path d="M195 95 Q192 118 192 140" stroke="#E8C96B" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
-            <!-- Top ganache -->
-            <ellipse cx="130" cy="85" rx="65" ry="12" fill="#C9A84C" opacity="0.85"/>
-            <!-- Sprinkle details -->
-            <circle cx="110" cy="150" r="4" fill="#C9A84C" opacity="0.35"/>
-            <circle cx="140" cy="170" r="4" fill="#C9A84C" opacity="0.3"/>
-            <circle cx="165" cy="145" r="3" fill="#C9A84C" opacity="0.28"/>
-            <circle cx="120" cy="185" r="3.5" fill="#C9A84C" opacity="0.25"/>
-            <!-- Cherry on top -->
-            <circle cx="130" cy="72" r="10" fill="#2a1a05" stroke="#C9A84C" stroke-width="1"/>
-            <line x1="130" y1="62" x2="134" y2="50" stroke="#C9A84C" stroke-width="1.5"/>
-            <text x="55" y="55" fill="#C9A84C" font-size="12" opacity="0.3">✦</text>
-            <text x="185" y="240" fill="#C9A84C" font-size="10" opacity="0.2">✦</text>
-          </svg>
+          <img class="about_img" src="./button.PNG" />
         </div>
         <div class="gallery-overlay">
           <span>Golden Drip</span>
